@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev House | Alugue ou compre sua casa</title>
-    <link rel="stylesheet" href="./style/output.css" />
+    <link rel="stylesheet" href="../styles/output.css" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,13 +12,51 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body class="bg-slate-200">
     <div class="w-full flex">
       <aside
         class="hidden sm:flex flex-col w-full max-w-50 min-h-screen relative bg-white px-2 py-5"
       >
-        <h1 class="text-4xl font-bold">Teste</h1>
+        <div class="fixed">
+          <div>
+            <h1 class="text-3xl font-bold text-blue-600">DevHouse</h1>
+          </div>
+
+          <nav class="flex flex-col gap-4 mt-6 w-full">
+            <a
+              href="#"
+              class="text-gray-500 font-medium hover:text-black hover:bg-gray-50 duration-200 p-3 rounded-lg"
+              >Aluguel</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 font-medium hover:text-black hover:bg-gray-50 duration-200 p-3 rounded-lg"
+              >Compra</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 font-medium hover:text-black hover:bg-gray-50 duration-200 p-3 rounded-lg"
+              >Serviços</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 font-medium hover:text-black hover:bg-gray-50 duration-200 p-3 rounded-lg"
+              >Contatos</a
+            >
+          </nav>
+        </div>
+
+        <button
+          class="w-11 h-11 rounded-full bg-gray-100 hover:bg-blue-600/80 hover:text-white duration-200 z-30 fixed bottom-4 left-3 cursor-pointer"
+        >
+          <i class="fa fa-phone" style="font-size: 16px"></i>
+        </button>
       </aside>
 
       <div></div>
