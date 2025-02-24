@@ -17,6 +17,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- script -->
+    <script type="text/javascript" src="./script.js" defer></script>
   </head>
   <body class="bg-slate-200">
     <div class="w-full flex">
@@ -61,20 +63,90 @@
       </aside>
 
       <main class="w-full flex flex-col pb-4">
+        <!-- MENU MOBILE -->
+        <div
+          class="hidden absolute z-50 w-full bg-white flex-col px-3 py-2 shadow-xl"
+          id="menu_mobile"
+        >
+          <button
+            class="mt-4 mr-6 p-3 cursor-pointer self-center"
+            id="close-menu"
+            onclick="toggleMenu()"
+          >
+            <i
+              class="fa fa-angle-up text-gray-500"
+              style="font-size: 40px; font-weight: bold"
+            ></i>
+          </button>
+
+          <div class="pb-3">
+            <nav class="flex flex-col gap-4 mt-6 w-full">
+              <a
+                href="#"
+                class="text-gray-500 font-medium hover:text-black hover:bg-gray-100 duration-200 p-3 rounded-lg"
+                chr
+                >Aluguel</a
+              >
+              <a
+                href="#"
+                class="text-gray-500 font-medium hover:text-black hover:bg-gray-100 duration-200 p-3 rounded-lg"
+                >Compra</a
+              >
+              <a
+                href="#"
+                class="text-gray-500 font-medium hover:text-black hover:bg-gray-100 duration-200 p-3 rounded-lg"
+                >Serviços</a
+              >
+              <a
+                href="#"
+                class="text-gray-500 font-medium hover:text-black hover:bg-gray-100 duration-200 p-3 rounded-lg"
+                >Contatos</a
+              >
+            </nav>
+          </div>
+        </div>
+        <!-- FIM MENU MOBILE -->
+
         <header
           class="bg-white w-full py-5 px-3 flex items-center justify-between"
         >
           <div
-            class="bg-slate-100 w-full max-w-xs lg:max-w-1/2 rounded-lg lg:mr-8 px-3 py-2 flex items-center gap-3"
+            class="bg-slate-100 w-full max-w-xs lg:max-w-1/2 rounded-lg px-3 py-2 lg:mr-8 flex items-center gap-3"
           >
-            <i class="fa fa-search" style="color: gray"></i>
+            <i class="fa fa-search text-gray-500" style="font-size: 16px"></i>
             <input
               type="text"
-              class="w-full outline-0"
+              class="w-full outline-none"
               placeholder="Procurando um apartamento?"
             />
           </div>
+
+          <div class="flex items-center gap-3">
+            <a
+              href="#"
+              class="hidden bg-slate-100 w-8 h-8 p-5 rounded-full md:flex justify-center items-center"
+            >
+              <i class="fa fa-heart text-gray-500" style="font-size: 16px"></i>
+            </a>
+
+            <button
+              class="bg-blue-600/90 hover:bg-blue-600 duration-300 cursor-pointer rounded-lg py-2 px-4 text-white flex items-center justify-center"
+            >
+              <span class="hidden md:flex">Sign In</span>
+              <i class="fa fa-user md:ml-2"></i>
+            </button>
+
+            <button
+              class="sm:hidden flex items-center justify-center px-4 py-2 cursor-pointer"
+              id="open-menu"
+              onclick="toggleMenu()"
+            >
+              <i class="fa fa-bars" style="font-size: 24px"></i>
+            </button>
+          </div>
         </header>
+
+        <div class="w-full h-screen" onclick="toggleMenu('body')"></div>
       </main>
     </div>
   </body>
